@@ -18,6 +18,6 @@ public class Main {
 		}
 
 		new HhCvPaGe(driver).upDateDate();
+		driver.quit();
 	}
-
 }

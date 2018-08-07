@@ -3,15 +3,16 @@ package ua.in.voza.svClicer.pages.hh;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import ua.in.voza.svClicer.Utils;
 import ua.in.voza.svClicer.pages.AbstractPage;
 import ua.in.voza.svClicer.pages.CvPage;
 
 public class HhCvPaGe extends AbstractPage implements CvPage {
-	@FindBy(xpath = "//*[data-name=\"HH/Resume/UpdateResume\"/ancestor::*]")
+	@FindBy(xpath = "/html/body/div[5]/div[2]/div/div/div/div[4]/div[2]/div/div[2]/div/div/div/div[2]/div[3]/div[2]/button")
 	WebElement refreshButton;
 	public HhCvPaGe(WebDriver driver) {
 		super(driver);
-		url = "https://kiev.hh.ua/applicant/resumes/view?resume=71c8cebcff02fe5b610039ed1f727a6a58726a";
+		url = Utils.getPropery("cvLink");
 		driver.get(url);
 		init();
 	}
